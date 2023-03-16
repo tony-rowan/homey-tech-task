@@ -1,0 +1,33 @@
+<div>
+  <h1 class="font-bold text-4xl mb-4">Sign In</h1>
+
+<%= form_with(model: @session_authentication, url: session_path, class: "contents") do |form| %>
+  <% if @session_authentication.errors.any? %>
+    <div class="rounded bg-red-200 text-red-900 p-4">
+      Could not log you in with those credentials
+    </div>
+  <% end %>
+  <div class="my-5">
+    <%= form.label :username %>
+    <%= form.text_field :username,
+      class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :password %>
+    <%= form.password_field :password,
+      class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="inline">
+    <%= form.submit "Sign In",
+      class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>
+
+
+  <div>-- OR --</div>
+
+  <%= link_to "Sign Up", new_user_path,
+    class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+</div>
