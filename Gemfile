@@ -78,3 +78,5 @@ end
 group :test do
   gem "capybara"
 end
+
+gem "dockerfile-rails", ">= 1.2", :group => :development
