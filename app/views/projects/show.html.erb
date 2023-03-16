@@ -13,11 +13,20 @@
 <h4 class="mb-6">Project History</h4>
 
 <% @comments.each do |comment| %>
-  <div class="rounded mb-4 bg-gray-200 px-4 py-2">
-    <div class="text-sm">
-      <%= comment.username %>
+  <div class="mb-4">
+    <div class="rounded mb-2 bg-gray-200 px-4 py-2">
+      <div class="text-sm mb-2">
+        <% if comment.user %>
+          <%= comment.username %>
+        <% else %>
+          Automatic Message
+        <% end %>
+      </div>
+      <%= comment.body %>
     </div>
-    <%= comment.body %>
+    <div class="text-sm text-gray-600 text-right">
+      <%= comment.created_at %>
+    </div>
   </div>
 <% end %>
 

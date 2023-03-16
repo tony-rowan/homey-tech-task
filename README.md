@@ -22,3 +22,6 @@ while building this tech task.
 5. Q: Similar to projects, who should be allowed to comment on projects?
   Can comments be edited or deleted?
   A: Let's say no for now - comments are fire and forget - like text messages.
+
+6. Q: Should the history of the status changes be interspersed with the comments?
+  A: Yes.

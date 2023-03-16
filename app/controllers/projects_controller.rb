@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @comments = @project.comments.includes(:user)
+    @comments = @project.comments.includes(:user).order(created_at: :desc)
   end
 
   def new
