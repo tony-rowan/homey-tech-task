@@ -1,0 +1,23 @@
+<%= form_with(model: comment, class: "contents") do |form| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+        <% comment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :project_id, value: project.id %>
+
+  <div class="my-5">
+    <%= form.label :body, "Add a Comment" %>
+    <%= form.text_field :body,
+      class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <%= form.submit "Add", class: "button" %>
+<% end %>

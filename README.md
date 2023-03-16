@@ -18,3 +18,7 @@ while building this tech task.
 
 4. Q: What is status, is it an enum or a simple free text entry.
   A: Let's start with free text entry and see how we will get on.
+
+5. Q: Similar to projects, who should be allowed to comment on projects?
+  Can comments be edited or deleted?
+  A: Let's say no for now - comments are fire and forget - like text messages.

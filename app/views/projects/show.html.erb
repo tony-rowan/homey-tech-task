@@ -1,4 +1,4 @@
-<div class="flex items-center gap-4">
+<div class="flex items-center gap-4 mb-8">
   <div>
     <h2><%= @project.name %></h2>
     <h3>Status: <%= @project.status %></h3>
@@ -9,3 +9,19 @@
   <%= link_to "Edit", edit_project_path(@project), class: "button" %>
   <%= button_to "Delete", project_path(@project), method: :delete, class: "button" %>
 </div>
+
+<h4 class="mb-6">Project History</h4>
+
+<% @comments.each do |comment| %>
+  <div class="rounded mb-4 bg-gray-200 px-4 py-2">
+    <div class="text-sm">
+      <%= comment.username %>
+    </div>
+    <%= comment.body %>
+  </div>
+<% end %>
+
+<%= link_to "Add Comment", new_comment_path(project: @project),
+  class: "button" %>
+
+
