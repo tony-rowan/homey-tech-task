@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "GET /users/new" do
   it "renders a successful response" do
@@ -18,12 +18,12 @@ RSpec.describe "POST /users" do
 
     it "creates a new User" do
       expect {
-        post users_url, params: { user: attributes }
+        post users_url, params: {user: attributes}
       }.to change(User, :count).by(1)
     end
 
     it "redirects to the home page" do
-      post users_url, params: { user: attributes }
+      post users_url, params: {user: attributes}
       expect(response).to redirect_to(root_url)
     end
   end
@@ -37,13 +37,12 @@ RSpec.describe "POST /users" do
 
     it "does not create a new User" do
       expect {
-        post users_url, params: { user: attributes }
+        post users_url, params: {user: attributes}
       }.to change(User, :count).by(0)
     end
 
-
     it "renders a response with 422 status (i.e. to display the 'new' template)" do
-      post users_url, params: { user: attributes }
+      post users_url, params: {user: attributes}
       expect(response).to have_http_status(:unprocessable_entity)
     end
   end
@@ -62,13 +61,12 @@ RSpec.describe "POST /users" do
 
     it "does not create a new User" do
       expect {
-        post users_url, params: { user: attributes }
+        post users_url, params: {user: attributes}
       }.to change(User, :count).by(0)
     end
 
-
     it "renders a response with 422 status (i.e. to display the 'new' template)" do
-      post users_url, params: { user: attributes }
+      post users_url, params: {user: attributes}
       expect(response).to have_http_status(:unprocessable_entity)
     end
   end

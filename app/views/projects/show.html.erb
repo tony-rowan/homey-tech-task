@@ -1,0 +1,11 @@
+<div class="flex items-center gap-4">
+  <div>
+    <h2><%= @project.name %></h2>
+    <h3>Status: <%= @project.status %></h3>
+  </div>
+
+  <div class="flex-grow"></div>
+
+  <%= link_to "Edit", edit_project_path(@project), class: "button" %>
+  <%= button_to "Delete", project_path(@project), method: :delete, class: "button" %>
+</div>

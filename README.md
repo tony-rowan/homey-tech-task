@@ -8,3 +8,13 @@ while building this tech task.
 1. Q: How should the user register/login?
   A: Let's just stick to simple username and password for now,
   with no email intergration.
+
+2. Q: Who should have access to projects; who can create, edit, delete them?
+  A: For simplicity, let's say user can create a project, and there's no rules
+  for who can then modify those projects.
+
+3. Q: What is a project? What fields does it have?
+  A: Projects simply have a name and a status, and associated comments.
+
+4. Q: What is status, is it an enum or a simple free text entry.
+  A: Let's start with free text entry and see how we will get on.

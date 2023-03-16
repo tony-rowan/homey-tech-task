@@ -1,7 +1,7 @@
 require "rails_helper"
 
-RSpec.feature "Registration" do
-  scenario "User can register by filling out all fields" do
+RSpec.describe "Registration" do
+  it "User can register by filling out all fields" do
     visit root_url
 
     expect(page).to have_text "Sign In"
@@ -16,7 +16,7 @@ RSpec.feature "Registration" do
     expect(User.last.username).to eq("username")
   end
 
-  scenario "User sees an error if the form is incorrectly filled out" do
+  it "User sees an error if the form is incorrectly filled out" do
     visit new_user_path
     click_on "Sign Up"
 

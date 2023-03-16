@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "GET /sessions/new" do
   it "returns http success" do
@@ -22,7 +22,7 @@ RSpec.describe "POST /session" do
     end
 
     it "redirects the user to the home page" do
-      post session_url, params: { session_authentication: credentials }
+      post session_url, params: {session_authentication: credentials}
 
       expect(response).to redirect_to(root_url)
     end
@@ -36,7 +36,7 @@ RSpec.describe "POST /session" do
     end
 
     it "responds with a 422" do
-      post session_url, params: { session_authentication: credentials }
+      post session_url, params: {session_authentication: credentials}
 
       expect(response).to have_http_status(:unprocessable_entity)
     end

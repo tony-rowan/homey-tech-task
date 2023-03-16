@@ -13,17 +13,19 @@
 
   <body>
     <nav class="bg-gray-100 shadow mb-4 p-4">
-      <div class="flex items-center mx-auto max-w-screen-md">
+      <div class="flex gap-4 items-center mx-auto max-w-screen-md">
         <h1>Homey</h1>
         <div class="flex-grow"></div>
         <% if logged_in? %>
+          <p>Welcome, <%= Current.user.username %></p>
+
           <%= button_to "Sign Out", session_path, method: :delete,
             class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
         <% end %>
       </div>
     </nav>
 
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="mx-auto max-w-screen-md">
       <%= yield %>
     </main>
   </body>

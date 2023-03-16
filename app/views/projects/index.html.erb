@@ -1,0 +1,18 @@
+<div class="flex gap-4 items-center mb-8">
+  <h2>Projects</h2>
+  <div class="flex-grow"></div>
+  <%= link_to "Add Project", new_project_path, class: "button" %>
+</div>
+
+<div class="grid grid-cols-2 gap-8">
+  <% @projects.each do |project| %>
+    <div>
+      <p><%= project.name %> - <%= project.status %></p>
+      <div class="flex gap-4">
+        <%= link_to "View", project_path(project), class: "button" %>
+        <%= link_to "Edit", edit_project_path(project), class: "button" %>
+        <%= button_to "Delete", project_path(project), method: :delete, class: "button" %>
+      </div>
+    </div>
+  <% end %>
+</div>
