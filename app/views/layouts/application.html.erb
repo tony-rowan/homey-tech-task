@@ -14,7 +14,7 @@
   <body>
     <nav class="bg-gray-100 shadow mb-4 p-4">
       <div class="flex gap-4 items-center mx-auto max-w-screen-md">
-        <h1>Homey</h1>
+        <%= link_to "Homey", root_path, class: "text-3xl font-bold" %>
         <div class="flex-grow"></div>
         <% if logged_in? %>
           <p>Welcome, <%= Current.user.username %></p>
