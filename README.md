@@ -1,9 +1,19 @@
 # Homey Take Home Tech Task
 
+I spent a little over the three hours - mainly becuase I didn't factor
+in the time to get the app hosted when making some early decisions.
+
+For the most part I have treated this like a real piece of work - I followed
+TDD and tried to make the code readable and production ready, but the time
+limit obviously meant that was not always the case. The most obvious is the
+authentication, followed by the fact that the status changes are recorded as
+comments with the only differentiator being the user ID, which won't scale
+as a solution. On a real app, I would also spend a lot more time on the design.
+
 ## Questions
 
-Here I will record all of the questions and assumed answers I have thought of
-while building this tech task.
+Here are the questions I would have asked and the answers
+I assumed I would have got.
 
 1. Q: How should the user register/login?
   A: Let's just stick to simple username and password for now,
